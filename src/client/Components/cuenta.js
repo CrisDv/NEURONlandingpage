@@ -51,27 +51,27 @@ export default class reloj extends Component {
               <div className="row" id="styleclock" >
                 <div className="xde col-md-2 col-6" id="meses">
                   <h1 id="month">{this.state.meses} </h1>
-                  <p >MESES</p>
+                  <p id="time">MESES</p>
                 </div>
     
                 <div className="xde col-md-2 col-6" id="dias" style={{display:`${ this.state.visibilidad}` }} >
                   <h1 id="day">{this.state.dias} </h1>
-                  <p>DIAS</p>
+                  <p id="time">DIAS</p>
                 </div>
     
                 <div className="xde col-md-2 col-6" id="horas">
                   <h1 id="hour">{this.state.horas} </h1>
-                  <p >HORAS</p>
+                  <p id="time">HORAS</p>
                 </div>
     
                 <div className="xde col-md-2 col-6" id="minutos">
                   <h1 id="minute" >{this.state.minutos} </h1>
-                  <p >MINUTOS</p>
+                  <p id="time">MINUTOS</p>
                 </div>
     
                 <div className="xde col-md-2 col-6" id="segundos">
                   <h1 id="seconds">{this.state.segundos} </h1>
-                  <p>SEGUNDOS</p>
+                  <p id="time">SEGUNDOS</p>
                 </div>
               </div>
               

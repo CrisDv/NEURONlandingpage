@@ -53,19 +53,19 @@ export default class FormRegistro extends Component {
                     </div>
 
                     <div className="form-row">
-                        <div className="form-group col-md-6 ">
+                        <div className="form-group col-md-6 " style={{display:"flex", justifyContent:"center"}}>
                             <input type="mail" className="box1" name="mail" placeholder="Correo Electrónico*" id="mail" onChange={this.handleChange}/>
                         </div>
-                        <div className="form-group col-md-6 ">
+                        <div className="form-group col-md-6 " style={{display:"flex", justifyContent:"center"}}>
                             <input type="text"className="box1" name="NombreEmpresa" placeholder="Nombre Empresa" id="NombreEmpresa"  onChange={this.handleChange}/>
                         </div>
                     </div>
 
                     <div className="form-row">
-                        <div className="form-group col-md-6 ">
+                        <div className="form-group col-md-6 " style={{display:"flex", justifyContent:"center"}}>
                             <input type="text" className="box1" name="NoContacto" placeholder="Numero Telefónico*" id="NoContacto" onChange={this.handleChange}/>
                         </div>
-                        <div className="form-group col-md-6 ">
+                        <div className="form-group col-md-6 " style={{display:"flex", justifyContent:"center"}}>
                             <input type="text" className="box1" name="TipoEmpresa" placeholder="Tipo de empresa" id="TipoEmpresa" onChange={this.handleChange} />
                         </div>
                     </div>
