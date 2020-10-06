@@ -9,3 +9,11 @@
     padding-right: 100px;
 
 }
+
+@media screen and (max-width:450px)
+{
+    #Sig
+    {
+        margin-left: 80px;
+    }
+}
