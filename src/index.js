@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/api/landing', require('./routes/formsroute'));//Ruta para el api de GET y SET de la base de datos de MONGO
+app.post('/api/landing', require('./routes/formsroute'));
 
 // Middlewares
 app.use(morgan('dev'));//ver ejecuciones de el servidor
