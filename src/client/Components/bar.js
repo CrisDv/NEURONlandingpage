@@ -14,7 +14,7 @@ export default class bar extends Component {
           </div>
 
           <div className="">
-            <a href="https://www.instagram.com/neuron_remoter/" style={{textDecoration:"none"}} ><span  style={{marginRight:"30px", textDecoration:"none", color:"white"}} >Siguenos</span></a>
+            <a href="https://www.instagram.com/neuron_remoter/" style={{textDecoration:"none"}} ><span  style={{marginRight:"30px", textDecoration:"none", color:"white"}} >Síguenos</span></a>
             <a href="https://www.instagram.com/neuron_remoter/"><img src={IG} alt="IG"  style={{width:"30px", height:"30px", marginRight:"140px"}} /></a>
         </div>
         </nav>

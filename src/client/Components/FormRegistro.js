@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Button} from '@material-ui/core'
 
 import '../styles/Form.css'
 export default class FormRegistro extends Component {
@@ -11,10 +12,12 @@ export default class FormRegistro extends Component {
             mail:'',
             NombreEmpresa:'',
             NoContacto:'',
-            TipoEmpresa:''
+            TipoEmpresa:'',
+            abierto:false
         };
         this.handleChange=this.handleChange.bind(this);
         this.addRegister=this.addRegister.bind(this);
+        this.handleClose=this.handleClose.bind(this);
     }
 
     handleChange(e)
@@ -30,49 +33,94 @@ export default class FormRegistro extends Component {
     {
         e.preventDefault();
 
-        fetch('/api/landing', {
-            method:'POST',
-            body:JSON.stringify(this.state),//enviar el estado ya que tiene todos los atributos de nombre, empresa etc
-            headers:{
-                'Accept':'application/json',
-                'Content-Type':'application/json'
-            }
+        if (this.state.nombre=='' || this.state.mail==''  || this.state.TipoEmpresa=='' || this.state.NoContacto=='' || this.state.NombreEmpresa=='') {
+            alert('Aun faltan campos')
+        }
+        else
+        {
+            fetch('/api/landing', {
+                method:'POST',
+                body:JSON.stringify(this.state),//enviar el estado ya que tiene todos los atributos de nombre, empresa etc
+                headers:{
+                    'Accept':'application/json',
+                    'Content-Type':'application/json'
+                }
+            })
+           /* .then(res=>console.log(res))
+            .catch(err=>console.error("ERROR"+err))*/
+
+            this.setState({abierto:true})
+        }
+
+    }
+
+    handleClose()
+    {
+        this.setState({abierto:false})
+
+        this.setState({
+            nombre:'',
+            mail:'',
+            NombreEmpresa:'',
+            NoContacto:''
         })
-       /* .then(res=>console.log(res))
-        .catch(err=>console.error("ERROR"+err))*/
     }
 
     render() {
+       
+        const isOpen=this.state.abierto
+
         return (
             <div id="FormPrincipal">
                 <form name="formulario" id="landingform" onSubmit={this.addRegister} >
                     <div className="form-row">
                         <div className="form-group col-12" style={{display:"flex", justifyContent:"center"}} >
-                            <input className="box1" name="nombre" type="text" placeholder="Nombre y Apellido*" id="nombre" onChange={this.handleChange} />
+                            <input className="box1" value={this.state.nombre} name="nombre" type="text" placeholder="Nombre y Apellido*" id="nombre" onChange={this.handleChange} value={this.state.nombre} />
                         </div>
                     </div>
 
                     <div className="form-row">
                         <div className="form-group col-md-6 " style={{display:"flex", justifyContent:"center"}}>
-                            <input type="mail" className="box1" name="mail" placeholder="Correo Electrónico*" id="mail" onChange={this.handleChange}/>
+                            <input type="mail" className="box1" name="mail" placeholder="Correo Electrónico*" id="mail" onChange={this.handleChange} value={this.state.mail} />
                         </div>
                         <div className="form-group col-md-6 " style={{display:"flex", justifyContent:"center"}}>
-                            <input type="text"className="box1" name="NombreEmpresa" placeholder="Nombre Empresa" id="NombreEmpresa"  onChange={this.handleChange}/>
+                            <input type="text"className="box1" name="NombreEmpresa" placeholder="Nombre Empresa" id="NombreEmpresa"  onChange={this.handleChange} value={this.state.NombreEmpresa} />
                         </div>
                     </div>
 
                     <div className="form-row">
                         <div className="form-group col-md-6 " style={{display:"flex", justifyContent:"center"}}>
-                            <input type="text" className="box1" name="NoContacto" placeholder="Numero Telefónico*" id="NoContacto" onChange={this.handleChange}/>
+                            <input type="text" className="box1" name="NoContacto" placeholder="Número Telefónico*" id="NoContacto" onChange={this.handleChange} value={this.state.NoContacto} />
                         </div>
                         <div className="form-group col-md-6 " style={{display:"flex", justifyContent:"center"}}>
-                            <input type="text" className="box1" name="TipoEmpresa" placeholder="Tipo de empresa" id="TipoEmpresa" onChange={this.handleChange} />
+                            <select value={this.state.TipoEmpresa} className="box1" name="TipoEmpresa" id="TipoEmpresa" onChange={this.handleChange}>
+                                <option value="...">Seleccione</option>
+                                <option value="Manufactura">Manufactura</option>
+                                <option value="Servicios">Servicios</option>
+                                <option value="Comercializadora">Comercializadora</option>
+                                <option value="Otras">Otras</option>
+                            </select>
                         </div>
                     </div>
                     <div className="avisame" style={{display:"flex", justifyContent:"center"}}>
                         <button id="enviar" type="submit">AVÍSAME</button>  
                     </div>
                 </form>
+
+                <Dialog open={isOpen} onClose={this.handleClose}>
+                    <DialogTitle id="alert-dialog-title">¡Gracias por Suscribirte!</DialogTitle>
+                        <DialogContent>
+                            <DialogContentText id="alert-dialog-description">
+                                Te notificaremos cuando estemos listos para ofrecerte el mejor servicio.
+
+                            </DialogContentText>
+                        </DialogContent>
+                    <DialogActions>
+                    <Button onClick={this.handleClose} color="primary">
+                        Aceptar
+                    </Button>
+                    </DialogActions>
+                </Dialog>
             </div>
         )
     }

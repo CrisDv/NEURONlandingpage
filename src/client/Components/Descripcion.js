@@ -10,11 +10,11 @@ export default class Descripcion extends Component {
                 </div>
                 <div id="que_es">
                     <p>
-                        Somos el equipo de trabajo que gestiona el area administrativa de tu empresa
-                        <br/>para que puedas enfocarte en tu crecimiento comercial
+                        Somos el equipo de trabajo que gestiona el área administrativa <br/> de tu empresa
+                        para que puedas enfocarte en tu crecimiento comercial
                     </p>
 
-                    <p style={{fontSize:"30px"}} >Suscríbete para obtener <b>30 días gratis. </b> </p>
+                    <p style={{fontSize:"20px"}} >Suscríbete para obtener <b>30 días gratis. </b> </p>
                 </div>
             </div>
         )

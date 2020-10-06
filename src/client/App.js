@@ -1,4 +1,7 @@
 import React, {Component} from 'react'
+import '@material-ui/core'
+
+
 
 import Home from './home'
 
