@@ -40,15 +40,15 @@ src: local('Milliard Medium'), url('../Assets/FontProximaNova/Rene\ Bieder\ \ Mi
     {
         font-family: 'Milliard Medium';
         text-align: center;
-        font-size: 15px;
+        font-size: 20px;
     }
 
     #Titulo
-{
+    {
     font-family: 'Milliard Bold';
     text-align: center;
     font-size: 25px;
     margin-left: 2px;
     margin-right: 2px;
-}
+    }
 }
