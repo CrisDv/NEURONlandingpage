@@ -9,4 +9,5 @@ const FormSchema = new Schema({
   TipoEmpresa: { type: String, required: true }
 });
 
+
 module.exports = mongoose.model('Registro', FormSchema);//dar el nombre de el modelo y la estructura

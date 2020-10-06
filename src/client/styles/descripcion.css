@@ -35,7 +35,7 @@ src: local('Milliard Medium'), url('../Assets/FontProximaNova/Rene\ Bieder\ \ Mi
 }
 
 /*Pantallas menos de 601px que ponga la letra en 20px*/
-@media screen and (max-width:601px)
+@media screen and (max-width:450px)
 {
     #que_es
     {
