@@ -10,6 +10,7 @@ export default class home extends Component {
     render() {
         return (
             <div>
+                
                 <Bar/>
                 <Descripcion/>
                 <FormRegistro/>
