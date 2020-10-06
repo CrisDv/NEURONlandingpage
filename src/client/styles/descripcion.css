@@ -48,6 +48,7 @@ src: local('Milliard Medium'), url('../Assets/FontProximaNova/Rene\ Bieder\ \ Mi
     font-family: 'Milliard Bold';
     text-align: center;
     font-size: 30px;
-    margin: 3px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 }
