@@ -107,7 +107,7 @@ export default class FormRegistro extends Component {
                     </div>
                 </form>
 
-                <Dialog open={isOpen} onClose={this.handleClose} >
+                <Dialog open={isOpen} onClose={this.handleClose} id="BoxDialog"> 
                     <DialogTitle id="dialogLanding">¡Gracias por Suscribirte!</DialogTitle>
                         <DialogContent id="dialogLanding">
                             <DialogContentText id="dialogLanding">
