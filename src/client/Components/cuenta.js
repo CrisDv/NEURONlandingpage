@@ -65,7 +65,7 @@ export default class reloj extends Component {
                 </div>
     
                 <div className="xde col-md-2 col-6" id="minutos">
-                  <h1 id="minute">{this.state.minutos} </h1>
+                  <h1 id="minute" >{this.state.minutos} </h1>
                   <p >MINUTOS</p>
                 </div>
     
