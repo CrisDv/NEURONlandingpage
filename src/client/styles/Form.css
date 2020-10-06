@@ -24,7 +24,21 @@
     border-radius: 5px;
 }
 
+#Agree
+{
+    width: 100px;
+    height: 30px;
+    background-color: #0498D9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
 
+#dialogLanding
+{
+    background-color: #184861;
+    color: #D6D6D6;
+}
 
 @media screen and (max-width:450px)
 {

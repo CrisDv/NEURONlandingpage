@@ -54,7 +54,7 @@ export default class reloj extends Component {
                   <p id="time">MESES</p>
                 </div>
     
-                <div className="xde col-md-2 col-6" id="dias" style={{display:`${ this.state.visibilidad}` }} >
+                <div className="xde col-md-2 col-6" id="dias" style={{display:"block"}} >
                   <h1 id="day">{this.state.dias} </h1>
                   <p id="time">DIAS</p>
                 </div>

@@ -107,18 +107,18 @@ export default class FormRegistro extends Component {
                     </div>
                 </form>
 
-                <Dialog open={isOpen} onClose={this.handleClose}>
-                    <DialogTitle id="alert-dialog-title">¡Gracias por Suscribirte!</DialogTitle>
-                        <DialogContent>
-                            <DialogContentText id="alert-dialog-description">
+                <Dialog open={isOpen} onClose={this.handleClose} >
+                    <DialogTitle id="dialogLanding">¡Gracias por Suscribirte!</DialogTitle>
+                        <DialogContent id="dialogLanding">
+                            <DialogContentText id="dialogLanding">
                                 Te notificaremos cuando estemos listos para ofrecerte el mejor servicio.
 
                             </DialogContentText>
                         </DialogContent>
-                    <DialogActions>
-                    <Button onClick={this.handleClose} color="primary">
+                    <DialogActions id="dialogLanding">
+                    <button id="Agree" onClick={this.handleClose} color="primary">
                         Aceptar
-                    </Button>
+                    </button>
                     </DialogActions>
                 </Dialog>
             </div>
