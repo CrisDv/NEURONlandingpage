@@ -28,7 +28,6 @@ export default class FormRegistro extends Component {
 
     addRegister(e)
     {
-        console.log(this.state)
         e.preventDefault();
 
         fetch('/api/landing', {
