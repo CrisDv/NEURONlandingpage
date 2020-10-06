@@ -5,11 +5,13 @@
         font-family: 'Milliard Medium';
         text-align: center;
         font-size: 2vw;
-    }
 
+        margin-left: 5%;
+    }
+ 
     #segundos
     {
-        margin-left: 30px;
+        margin-left: 50px;
     }
 
     #segundos h1
@@ -19,8 +21,13 @@
 
     #minutos h1
     {
-        margin-left: 23px;
+        margin-left: 25px;
     }
+}
+
+.kha
+{
+    display: block;
 }
 
 /*Pantallas menos de 601px que ponga la letra en 20px*/

@@ -14,7 +14,8 @@ export default class reloj extends Component {
       horas:undefined,
       minutos:undefined,
       segundos:undefined,
-      visibilidad:'block'
+      visibilidad:'none',
+      visibilidad2:''
     }
   }
 
@@ -40,6 +41,15 @@ export default class reloj extends Component {
         segundos:SEGUNDOS_RESTANTES
       })
       
+      if(this.state.dias>=30)
+      {
+        this.setState({visibilidad:'none', visibilidad2:''});
+      }
+      else
+      {
+        this.setState({visibilidad:'', visibilidad2:'none'})
+      }
+
     }, 1000);
   }
 
@@ -49,12 +59,12 @@ export default class reloj extends Component {
             <div style={{display:"flex", justifyContent:"center", marginTop:"20px"}}>
                 <div className="content" id="reloj">
               <div className="row" id="styleclock" >
-                <div className="xde col-md-2 col-6" id="meses">
+                <div className="xde col-md-2 col-6" id="meses" style={{display:`${this.state.visibilidad2}`}}>
                   <h1 id="month">{this.state.meses} </h1>
                   <p id="time">MESES</p>
                 </div>
     
-                <div className="xde col-md-2 col-6" id="dias" style={{display:"block"}} >
+                <div className="xde col-md-2 col-6 kha" id="dias" style={{display:`${this.state.visibilidad}`}}>
                   <h1 id="day">{this.state.dias} </h1>
                   <p id="time">DIAS</p>
                 </div>
