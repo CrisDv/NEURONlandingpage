@@ -1,0 +1,46 @@
+@font-face 
+{
+    font-family: 'Milliard Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Milliard Bold'), url('../Assets/FontProximaNova/Rene\ Bieder\ \ Milliard\ SemiBold.woff') format('woff');
+}
+    
+
+@font-face
+{
+    font-family: 'Milliard Medium';
+font-style: normal;
+font-weight: normal;
+src: local('Milliard Medium'), url('../Assets/FontProximaNova/Rene\ Bieder\ \ Milliard\ Medium.woff') format('woff');
+}
+
+#Titulo
+{
+    font-family: 'Milliard Bold';
+    text-align: center;
+    font-size: 4.5vw;
+}
+
+
+
+@media screen and (min-width:600px)
+{
+    #que_es
+    {
+        font-family: 'Milliard Medium';
+        text-align: center;
+        font-size: 2vw;
+    }
+}
+
+/*Pantallas menos de 601px que ponga la letra en 20px*/
+@media screen and (max-width:601px)
+{
+    #que_es
+    {
+        font-family: 'Milliard Medium';
+        text-align: center;
+        font-size: 20px;
+    }
+}

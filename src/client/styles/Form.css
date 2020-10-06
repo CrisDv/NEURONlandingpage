@@ -1,0 +1,25 @@
+#FormPrincipal
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.box1
+{
+    width: 500px;
+    height: 40px;
+}
+
+#enviar
+{
+    width: 160px;
+    height: 50px;
+    background-color: #0498D9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

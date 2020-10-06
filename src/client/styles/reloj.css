@@ -1,0 +1,30 @@
+@media screen and (min-width:600px)
+{
+    .xde
+    {
+        font-family: 'Milliard Medium';
+        text-align: center;
+        font-size: 2vw;
+    }
+
+    #segundos
+    {
+        margin-left: 30px;
+    }
+}
+
+/*Pantallas menos de 601px que ponga la letra en 20px*/
+@media screen and (max-width:450px)
+{
+    .xde
+    {
+        font-family: 'Milliard Medium';
+        text-align: center;
+        font-size: 50px;
+    }
+
+    #segundos
+    {
+        margin-left: 0px;
+    }
+}

@@ -1,0 +1,11 @@
+#navLogo
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    margin: 30px;
+    margin-left: 138px;
+    padding-right: 100px;
+
+}
