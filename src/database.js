@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const URI = 'mongodb+srv://NeuronAdmin:M0ng00s3x@cluster0.pevil.mongodb.net/landingpage?retryWrites=true&w=majority';
+const URI = '';
 //const URI = 'mongodb://localhost/mern-crud-test';
 
 mongoose.connect(URI, {useNewUrlParser:true, useUnifiedTopology: true})//avoid warnings
